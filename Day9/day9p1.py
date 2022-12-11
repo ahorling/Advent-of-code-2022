@@ -9,8 +9,9 @@ def move_left(grid, distance, posH, posT):
         if abs(posH[0] - posT[0]) > 1:
             posT[0] = posT[0] - 1
             posT[1] = posH[1]
-            grid[posT[0]][posT[1]] = "#"
+            grid[posT[1]][posT[0]] = "#"
         i += 1
+        # print(posH)
 
 
 def move_right(grid, distance, posH, posT):
@@ -20,8 +21,9 @@ def move_right(grid, distance, posH, posT):
         if abs(posH[0] - posT[0]) > 1:
             posT[0] = posT[0] + 1
             posT[1] = posH[1]
-            grid[posT[0]][posT[1]] = "#"
+            grid[posT[1]][posT[0]] = "#"
         i += 1
+        # print(posH)
 
 def move_up(grid, distance, posH, posT):
     i = 0
@@ -30,8 +32,9 @@ def move_up(grid, distance, posH, posT):
         if abs(posH[1] - posT[1]) > 1:
             posT[1] = posT[1] + 1
             posT[0] = posH[0]
-            grid[posT[0]][posT[1]] = "#"
+            grid[posT[1]][posT[0]] = "#"
         i += 1
+        # print(posH)
 
 def move_down(grid, distance, posH, posT):
     i = 0
@@ -40,14 +43,15 @@ def move_down(grid, distance, posH, posT):
         if abs(posH[1] - posT[1]) > 1:
             posT[1] = posT[1] - 1
             posT[0] = posH[0]
-            grid[posT[0]][posT[1]] = "#"
+            grid[posT[1]][posT[0]] = "#"
         i += 1
+        # print(posH)
 
 
 
 grid = [["." for x in range(300)] for y in range(300)]
 x = 149
-y = 149
+y = 0
 posH = [x,y]
 posT = [x,y]
 
